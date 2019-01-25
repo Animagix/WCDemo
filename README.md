@@ -1,7 +1,5 @@
 # Web Components Demo
 This repo it's just an introduction and a demo of **web components**
-
-### Before we start:
 > You can see many documentation from others in blogs, webs, etc. You can start seeing 
 the W3C repo in [Github](https://github.com/w3c/webcomponents/), the website [webcomponents.org](https://www.webcomponents.org/introduction) and it's [Github](https://github.com/webcomponents)
 
@@ -13,7 +11,7 @@ So, what if i tell you web components work in modern browsers without any layer,
 
 > NOTE: if you like to give support to old browsers like IE11 there are polyfills for it.
 
-##### The four pillars:
+### The four pillars:
 - **Custom Elements**: Custom Dom element with it's behaviour. You can create custom snippets of HTML with custom CSS.
     > NOTE: To register a custom element you must invoke ```customElements.define("custom-tag", class);```, this will construct a new instance of your class. 
 - **Shadow Dom**: It's a sub tree rendered in DOM separately way into the node ```shadowRoot```. The main purpose of shadow DOM is encapsulate your custom element to make it private, this makes as well that everything from outside can not affect anything to your component.
