@@ -14,14 +14,14 @@ So, what if i tell you web components work in modern browsers without any layer,
 > NOTE: if you like to give support to old browsers like IE11 there are polyfills for it.
 
 ##### The four pillars:
-- Custom Elements: Custom Dom element with it's behaviour. You can create custom snippets of HTML with custom CSS.
+- **Custom Elements**: Custom Dom element with it's behaviour. You can create custom snippets of HTML with custom CSS.
     > NOTE: To register a custom element you must invoke ```customElements.define("custom-tag", class);```, this will construct a new instance of your class. 
-- Shadow Dom: It's a sub tree rendered in DOM separately way into the node ```shadowRoot```. The main purpose of shadow DOM is encapsulate your custom element to make it private, this makes as well that everything from outside can not affect anything to your component.
-- ES Modules: This is basically the module import system of javascript, example: 
+- **Shadow Dom**: It's a sub tree rendered in DOM separately way into the node ```shadowRoot```. The main purpose of shadow DOM is encapsulate your custom element to make it private, this makes as well that everything from outside can not affect anything to your component.
+- **ES Modules**: This is basically the module import system of javascript, example: 
     > JS way: ```import { myExample } from "src/js/example.js"```
     
     > HTML way: ```<script type="module" src="src/js/example.js">```
 
-- HTML Templates: Provides custom tag HTML ```<custom-tag></custom-tag>``` and the element ```<slot>``` that we'll see it later.
+- **HTML Templates**: Provides custom tag HTML ```<custom-tag></custom-tag>``` and the element ```<slot>``` that we'll see it later.
 
 ### Let's start!:
