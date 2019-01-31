@@ -1,23 +1,24 @@
 # 01 - Hello Web Components
 
-In this first step, we create a basic web component. This component display a list of names, like:
+In this first step, we'll create a basic web component and it will display a list of names, like:
 
 > Rodrigo, Gonzalo, Sergio, Juanquer, Manu Hacker
 
-So, what do we do?, everything is already done in ``` index.html ``` and ``` users-example.js ```, but we explain it step by step:
+So, what do we do?, keep reading :)
 
-> NOTE: I'll assume that you have basic ES6 knowledge, so i won't stop in some things
+> NOTE: Everything is already done in ``` index.html ``` and ``` users-example.js ```
 
-### 1. HTML template:
+
+### STEP 1. HTML template:
 
 In ```index.html``` we create a custom tag HTML ``` <users-example></users-example> ```, this tag is the one we refer later when we register our component with ``` customElement.define(); ```.
 
-### 2. My module JS:
+### STEP 2. My module JS:
 In this case, we generate a js file that we call it "users-example.js" and load it in our ``` index.html ```.
 
 Now, in our js we create a ES6 class named "CustomExample":
 
-```
+```javascript
 class CustomExample extends HTMLElement {
   constructor() {
     super();
@@ -62,8 +63,8 @@ Invoked every time the custom element is moved to new DOM.
 **5.attributeChangedCallback:**
 Invoked every time an attribute has changed or removed.
 
-### 3. shadow DOM:
-In contructor's class we assign a shadow DOM:
+### STEP 3. shadow DOM:
+In contructor's class we assign a shadow DOM to our custom element:
 
 ```
 this.shadowDom = this.attachShadow({ 'mode': 'open' });
@@ -72,9 +73,9 @@ this.shadowDom = this.attachShadow({ 'mode': 'open' });
 
 You noticed that you can pass to the method ```attachShadow()``` an argument that you can set a mode "open" or "closed", the difference between both it's basically that in closed mode you're not allowed to access content of ```shadowRoot``` you'll get a ```null```in response.
 
-### 4. Template:
+### STEP 4. Template:
 
-```
+```javascript
 const template = `
     <style>
         :host() {
@@ -96,17 +97,17 @@ const template = `
 
 Using "template strings" it's a way of how we write templates. If you want to render this snippet just do this:
 
-```
+```javascript
 this.shadowDom.innerHTML = template;
 ```
 
-### 5. styles:
+### STEP 5. styles:
 
 In the example above you can see the tag ```<style></syle>``` declared and some styles written in that block, i'm pretty sure you are very familiared with that, except with ```:host() {}```.
 This pseudo class selects your custom element tag, in this case it's ```<users-example></users-example>```.
 
-### 6. register and create your custom element:
-```
+### STEP 6. register your custom element:
+```javascript
 customElements.define(TAG_HTML, CustomExample);
 ```
 
