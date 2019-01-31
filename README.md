@@ -25,4 +25,6 @@ So, what if i tell you web components work in modern browsers without any layer,
 ### Play around:
 Check in the folders, i'll try to show you all i know from the basics.
 
-01-helloWC: We create a basic webcomponent
+**01-helloWC:** we'll create a basic web component.
+
+**02-PropsVsAttrs:** we'll see how can we update our component via property and/or attribute and how our custom element's properties reflect to attributes and vice versa.

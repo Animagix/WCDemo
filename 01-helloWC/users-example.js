@@ -61,7 +61,7 @@ class CustomExample extends HTMLElement {
     console.log('adopted in a new DOM');
   }
 
-  attributeChangedCallback(attrName, oldValue, newValue, domain) {
+  attributeChangedCallback(attrName, oldValue, newValue) {
     console.log('an atribbute has changed or removed');
   }
 
